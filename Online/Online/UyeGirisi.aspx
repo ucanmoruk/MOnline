@@ -43,8 +43,11 @@
                                             <asp:TextBox ID="txt_parola" type="password" class="form-control form-control-user" runat="server" placeholder="Parola"></asp:TextBox>
                                         </div>
 
-                          <asp:Button ID="Button1" runat="server" class="btn btn-primary btn-user btn-block" Text="Giriş Yap" />    
+
+                          <asp:Button ID="Button1" runat="server" class="btn btn-primary btn-user btn-block" Text="Giriş Yap" OnClick="Button1_Click" />    
                                     </form>
+
+  
                                     <hr>
                                     <div class="text-center">
                                         <a class="small" href="forgot-password.html">Parolamı Sıfırla</a>
@@ -63,11 +66,13 @@
         </div>
 
     </div>
-
-
-
-
+                           
         </div>
+        <div runat="server" id="theDiv">
+<div class="alert alert-warning alert-dismissible fade show">
+    <center><button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong>Kullanıcı adı veya parolanız hatalı!</strong> </center>
+  </div> </div>
     </form>
 </body>
 </html>
