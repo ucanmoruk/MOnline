@@ -53,7 +53,7 @@
                                         <a class="small" href="forgot-password.html">Parolamı Sıfırla</a>
                                     </div>
                                     <div class="text-center">
-                                        <a class="small" href="register.html">Üyelik Oluştur!</a>
+                                        <a class="small" href="KayitOl.aspx">Üyelik Oluştur!</a>
                                     </div>
                                 </div>
                             </div>
