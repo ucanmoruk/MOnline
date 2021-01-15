@@ -12,7 +12,7 @@
     <script src="Scripts/popper.min.js"></script>
 
 </head>
-<body>
+<body class="arkaplan">
     <form id="form1" runat="server">
 
           <div class="container">
@@ -75,7 +75,7 @@
                     <asp:TextBox ID="txt_parola2"  placeholder="Parolanızı tekrar girin *" type="password" class="form-control form-control-user" runat="server"></asp:TextBox>
                                     </div>
                                 </div>
-                                <asp:Button ID="btn_go" runat="server"  class="btn btn-primary btn-user btn-block" Text="Üyelik Oluştur" OnClick="btn_go_Click" />
+                                <asp:Button ID="btn_go" runat="server"  class="btn btn-warning btn-user btn-block button" Text="Üyelik Oluştur" OnClick="btn_go_Click" />
                              
                             </form>
                             <hr>

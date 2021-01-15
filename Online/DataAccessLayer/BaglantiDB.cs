@@ -8,9 +8,9 @@ using System.Data.SqlClient;
 
 namespace DataAccessLayer
 {
-    public class Baglanti
+    public class BaglantiDB
     {
-        public static SqlConnection bgl = new SqlConnection(@"Data Source=Oguzhan,1433; Initial Catalog = Mask; persist Security Info = True; User ID = sa; Password = 12344");
+        public static SqlConnection bgldb = new SqlConnection(@"Data Source=Oguzhan,1433; Initial Catalog = Online; persist Security Info = True; User ID = sa; Password = 12344");
 
 
     }

@@ -14,7 +14,7 @@ namespace DataAccessLayer
     {
         public static int FirmaEkle(EntityFirm parametre)
         {
-            SqlCommand komut = new SqlCommand("insert into Firma (Firma_Adi, Adres, Vergi_Dairesi, Vergi_No, Telefon, Mail, Parola) values (@a1,@a2,@a3,@a4,@a5,@a6,@a7)", Baglanti.bgl);
+            SqlCommand komut = new SqlCommand("insert into Firma (Firma_Adi, Adres, Vergi_Dairesi, Vergi_No, Telefon, Mail, Parola) values (@a1,@a2,@a3,@a4,@a5,@a6,@a7)", BaglantiDB.bgldb);
             if (komut.Connection.State != ConnectionState.Open)
             {
                 komut.Connection.Open();

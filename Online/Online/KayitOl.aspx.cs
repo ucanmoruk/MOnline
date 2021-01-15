@@ -6,6 +6,9 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Configuration;
+using DataAccessLayer;
+using EntityLayer;
+using BusinessLogicLayer;
 
 public partial class Login : System.Web.UI.Page
 {
@@ -17,6 +20,18 @@ public partial class Login : System.Web.UI.Page
     }
 
 
+    void temizle()
+    {
+        txt_adres.Text = "";
+        txt_firmaadi.Text = "";
+        txt_mail.Text = "";
+        txt_parola.Text = "";
+        txt_parola2.Text = "";
+        txt_telefon.Text = "";
+        txt_vergidairesi.Text = "";
+        txt_vergino.Text = "";
+       
+    }
 
     protected void btn_go_Click(object sender, EventArgs e)
     {
@@ -26,10 +41,20 @@ public partial class Login : System.Web.UI.Page
         }
         else
         {
-            
+
             if (txt_parola.Text == txt_parola2.Text)
             {
-
+                EntityFirm ent = new EntityFirm();
+                ent.Firma_Adi1 = txt_firmaadi.Text;
+                ent.Adres1 = txt_adres.Text ;
+                ent.Vergi_Dairesi1 = txt_vergidairesi.Text;
+                ent.Vergi_No1 = txt_vergino.Text;
+                ent.Mail1 = txt_mail.Text;
+                ent.Telefon1 = txt_telefon.Text;
+                ent.Parola1 = txt_parola.Text;
+                BLLFirmaEkle.FirmaEkleBLL(ent);
+                temizle();
+                Response.Write("<script>alert('Kayıt işleminiz başarı ile gerçekleşti!')</script>");
             }
             else
             {
